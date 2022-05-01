@@ -12,7 +12,10 @@ import SwiftUI
 class UserViewModel: ObservableObject {
     @ObservedObject var userStorage: UserStorage = UserStorage()
     
-    @Published var users: [User] = []
+    @Published var finalUsers: [User] = []
+    @Published private var users: [User] = []
+    var filteredUsers: [User] = []
+    var searchText = ""
     
     private var cancellables = [AnyCancellable]()
     let apiClient = APIClient()
@@ -26,6 +29,7 @@ class UserViewModel: ObservableObject {
                 if users.count > 0 {
                     print("Users counter: \(users.count)")
                     self.users = users
+                    self.finalUsers = users
                 }
             }
             .store(in: &cancellables)
@@ -38,8 +42,8 @@ class UserViewModel: ObservableObject {
                 if fetchData { self.fetchData() }
             }
             .store(in: &cancellables)
-
-
+        
+        
         userStorage.get()
     }
     
@@ -52,6 +56,22 @@ class UserViewModel: ObservableObject {
                 self.userStorage.save(users)
             }
             .store(in: &cancellables)
+    }
+    
+    func filter(onText text: String) {
+        self.searchText = text
+        filterUsers()
+    }
+    
+    private func filterUsers() {
+        if searchText.isEmpty {
+            finalUsers = users
+        }
+        else {
+            finalUsers = users.filter {
+                $0.name!.localizedCaseInsensitiveContains(searchText)
+            }
+        }
     }
     
 }
