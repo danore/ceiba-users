@@ -15,6 +15,8 @@ struct ceiba_usersApp: App {
         WindowGroup {
             MainView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .greenNavigationBar()
+                .background(Color.appGreen).ignoresSafeArea()
         }
     }
 }
