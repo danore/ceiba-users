@@ -13,6 +13,5 @@ struct ContentView: View {
     
     var body: some View {
         Text("test")
-            .onAppear(perform: viewModel.fetchData)
     }
 }

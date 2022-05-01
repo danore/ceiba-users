@@ -22,6 +22,8 @@
 		4AE21D6C281F0F6900865019 /* HTTPDispatcher+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D6B281F0F6900865019 /* HTTPDispatcher+Extension.swift */; };
 		4AE21D71281F116A00865019 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D70281F116A00865019 /* UserViewModel.swift */; };
 		4AE21D73281F11F300865019 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D72281F11F300865019 /* UserModel.swift */; };
+		4AE21D75281F16C200865019 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D74281F16C200865019 /* UserStorage.swift */; };
+		4AE21D77281F171100865019 /* StorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D76281F171100865019 /* StorageProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		4AE21D6B281F0F6900865019 /* HTTPDispatcher+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPDispatcher+Extension.swift"; sourceTree = "<group>"; };
 		4AE21D70281F116A00865019 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		4AE21D72281F11F300865019 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		4AE21D74281F16C200865019 /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
+		4AE21D76281F171100865019 /* StorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,7 @@
 		4AE21D57281F044300865019 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				4AE21D74281F16C200865019 /* UserStorage.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				4AE21D64281F0E2100865019 /* HTTPRequest.swift */,
+				4AE21D76281F171100865019 /* StorageProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -286,8 +292,10 @@
 				4AE21D71281F116A00865019 /* UserViewModel.swift in Sources */,
 				4AE21D49281F029A00865019 /* Persistence.swift in Sources */,
 				4AE21D6C281F0F6900865019 /* HTTPDispatcher+Extension.swift in Sources */,
+				4AE21D75281F16C200865019 /* UserStorage.swift in Sources */,
 				4AE21D4C281F029A00865019 /* ceiba_users.xcdatamodeld in Sources */,
 				4AE21D73281F11F300865019 /* UserModel.swift in Sources */,
+				4AE21D77281F171100865019 /* StorageProtocol.swift in Sources */,
 				4AE21D68281F0EA700865019 /* HTTPRequest+Extension.swift in Sources */,
 				4AE21D63281F0DE000865019 /* HTTPMethod.swift in Sources */,
 				4AE21D61281F0D5000865019 /* HTTPRequestError.swift in Sources */,
