@@ -12,6 +12,8 @@ import SwiftUI
 class UserViewModel: ObservableObject {
     @ObservedObject var userStorage: UserStorage = UserStorage()
     
+    @Published var users: [User] = []
+    
     private var cancellables = [AnyCancellable]()
     let apiClient = APIClient()
     
@@ -23,6 +25,7 @@ class UserViewModel: ObservableObject {
             } receiveValue: { users in
                 if users.count > 0 {
                     print("Users counter: \(users.count)")
+                    self.users = users
                 }
             }
             .store(in: &cancellables)
