@@ -55,11 +55,9 @@
 		4AE21D3E281F029900865019 /* ceiba-users */ = {
 			isa = PBXGroup;
 			children = (
-				4AE21D3F281F029900865019 /* ceiba_usersApp.swift */,
-				4AE21D41281F029900865019 /* ContentView.swift */,
-				4AE21D43281F029A00865019 /* Assets.xcassets */,
-				4AE21D48281F029A00865019 /* Persistence.swift */,
-				4AE21D4A281F029A00865019 /* ceiba_users.xcdatamodeld */,
+				4AE21D52281F03D100865019 /* SupportFiles */,
+				4AE21D53281F03DC00865019 /* Source */,
+				4AE21D54281F03E300865019 /* Resources */,
 				4AE21D45281F029A00865019 /* Preview Content */,
 			);
 			path = "ceiba-users";
@@ -71,6 +69,88 @@
 				4AE21D46281F029A00865019 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4AE21D52281F03D100865019 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				4AE21D3F281F029900865019 /* ceiba_usersApp.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		4AE21D53281F03DC00865019 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				4AE21D5B281F07A300865019 /* Networking */,
+				4AE21D5A281F047400865019 /* Protocols */,
+				4AE21D59281F046D00865019 /* Models */,
+				4AE21D58281F046600865019 /* Views */,
+				4AE21D55281F041C00865019 /* CoreData */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		4AE21D54281F03E300865019 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4AE21D43281F029A00865019 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4AE21D55281F041C00865019 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4AE21D57281F044300865019 /* Storage */,
+				4AE21D56281F043700865019 /* Config */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		4AE21D56281F043700865019 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				4AE21D4A281F029A00865019 /* ceiba_users.xcdatamodeld */,
+				4AE21D48281F029A00865019 /* Persistence.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		4AE21D57281F044300865019 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		4AE21D58281F046600865019 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4AE21D41281F029900865019 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4AE21D59281F046D00865019 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4AE21D5A281F047400865019 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4AE21D5B281F07A300865019 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
