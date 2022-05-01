@@ -13,7 +13,7 @@ class UserStorage: ObservableObject, UserStorageProtocol {
     
     private var context: NSManagedObjectContext
     
-    @Published var users: [User] = [User]()
+    @Published var users: [User] = []
     @Published var fetchRemoteData: Bool = false
     
     init() {
