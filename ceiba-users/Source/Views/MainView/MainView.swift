@@ -11,6 +11,8 @@ import CoreData
 struct MainView: View {
     @StateObject var viewModel: UserViewModel = UserViewModel()
     @State var searchString: String = ""
+    @State private var isDetailViewPresented: Bool = false
+    @State private var currentUser: User?
     
     var body: some View {
         UserSearchController(
@@ -50,21 +52,21 @@ struct MainView: View {
                                 }
                                 
                                 HStack {
-                                    Spacer()
-                                    Button {
-                                        print("Test")
-                                    } label: {
+                                    ZStack(alignment: .trailing) {
+                                        NavigationLink(
+                                            destination: UserDetailView().environmentObject(user)) {
+                                                EmptyView()
+                                            }
+                                            .opacity(0)
+                                        
                                         Text("VER PUBLICACIONES")
                                             .foregroundColor(Color.appGreen)
-                                            .font(.system(size: 14, weight: .bold))
                                     }
-                                    
                                 }
                                 .padding(.top, 10)
                             }
                             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 120, alignment: .topLeading)
                             .padding(5)
-                            
                         }
                     }
                     .listStyle(PlainListStyle())
