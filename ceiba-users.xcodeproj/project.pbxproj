@@ -8,21 +8,51 @@
 
 /* Begin PBXBuildFile section */
 		4AE21D40281F029900865019 /* ceiba_usersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D3F281F029900865019 /* ceiba_usersApp.swift */; };
-		4AE21D42281F029900865019 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D41281F029900865019 /* ContentView.swift */; };
+		4AE21D42281F029900865019 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D41281F029900865019 /* MainView.swift */; };
 		4AE21D44281F029A00865019 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AE21D43281F029A00865019 /* Assets.xcassets */; };
 		4AE21D47281F029A00865019 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AE21D46281F029A00865019 /* Preview Assets.xcassets */; };
 		4AE21D49281F029A00865019 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D48281F029A00865019 /* Persistence.swift */; };
 		4AE21D4C281F029A00865019 /* ceiba_users.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D4A281F029A00865019 /* ceiba_users.xcdatamodeld */; };
+		4AE21D5D281F0BCA00865019 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D5C281F0BCA00865019 /* APIClient.swift */; };
+		4AE21D61281F0D5000865019 /* HTTPRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D60281F0D5000865019 /* HTTPRequestError.swift */; };
+		4AE21D63281F0DE000865019 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D62281F0DE000865019 /* HTTPMethod.swift */; };
+		4AE21D65281F0E2100865019 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D64281F0E2100865019 /* HTTPRequest.swift */; };
+		4AE21D68281F0EA700865019 /* HTTPRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D67281F0EA700865019 /* HTTPRequest+Extension.swift */; };
+		4AE21D6A281F0F3100865019 /* HTTPDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D69281F0F3100865019 /* HTTPDispatcher.swift */; };
+		4AE21D6C281F0F6900865019 /* HTTPDispatcher+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D6B281F0F6900865019 /* HTTPDispatcher+Extension.swift */; };
+		4AE21D71281F116A00865019 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D70281F116A00865019 /* UserViewModel.swift */; };
+		4AE21D73281F11F300865019 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D72281F11F300865019 /* UserModel.swift */; };
+		4AE21D75281F16C200865019 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D74281F16C200865019 /* UserStorage.swift */; };
+		4AE21D77281F171100865019 /* StorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D76281F171100865019 /* StorageProtocol.swift */; };
+		4AE21D7C281F310300865019 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AE21D7B281F310300865019 /* Colors.xcassets */; };
+		4AE21D7E281F318000865019 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D7D281F318000865019 /* Color+Extension.swift */; };
+		4AE21D80281F32D800865019 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D7F281F32D800865019 /* View+Extension.swift */; };
+		4AE21D82281F34E400865019 /* UserSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE21D81281F34E400865019 /* UserSearchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4AE21D3C281F029900865019 /* ceiba-users.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ceiba-users.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE21D3F281F029900865019 /* ceiba_usersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ceiba_usersApp.swift; sourceTree = "<group>"; };
-		4AE21D41281F029900865019 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4AE21D41281F029900865019 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4AE21D43281F029A00865019 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AE21D46281F029A00865019 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4AE21D48281F029A00865019 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		4AE21D4B281F029A00865019 /* ceiba_users.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ceiba_users.xcdatamodel; sourceTree = "<group>"; };
+		4AE21D5C281F0BCA00865019 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		4AE21D60281F0D5000865019 /* HTTPRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestError.swift; sourceTree = "<group>"; };
+		4AE21D62281F0DE000865019 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		4AE21D64281F0E2100865019 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		4AE21D67281F0EA700865019 /* HTTPRequest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPRequest+Extension.swift"; sourceTree = "<group>"; };
+		4AE21D69281F0F3100865019 /* HTTPDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDispatcher.swift; sourceTree = "<group>"; };
+		4AE21D6B281F0F6900865019 /* HTTPDispatcher+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPDispatcher+Extension.swift"; sourceTree = "<group>"; };
+		4AE21D70281F116A00865019 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		4AE21D72281F11F300865019 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		4AE21D74281F16C200865019 /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
+		4AE21D76281F171100865019 /* StorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProtocol.swift; sourceTree = "<group>"; };
+		4AE21D7B281F310300865019 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		4AE21D7D281F318000865019 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		4AE21D7F281F32D800865019 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		4AE21D81281F34E400865019 /* UserSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +112,11 @@
 		4AE21D53281F03DC00865019 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				4AE21D5E281F0D0D00865019 /* Utilities */,
 				4AE21D5B281F07A300865019 /* Networking */,
 				4AE21D5A281F047400865019 /* Protocols */,
 				4AE21D59281F046D00865019 /* Models */,
+				4AE21D6F281F115800865019 /* ViewModels */,
 				4AE21D58281F046600865019 /* Views */,
 				4AE21D55281F041C00865019 /* CoreData */,
 			);
@@ -95,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				4AE21D43281F029A00865019 /* Assets.xcassets */,
+				4AE21D7B281F310300865019 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -120,6 +153,7 @@
 		4AE21D57281F044300865019 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				4AE21D74281F16C200865019 /* UserStorage.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -127,7 +161,7 @@
 		4AE21D58281F046600865019 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4AE21D41281F029900865019 /* ContentView.swift */,
+				4AE21D7A281F2D7900865019 /* MainView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -135,6 +169,7 @@
 		4AE21D59281F046D00865019 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4AE21D72281F11F300865019 /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -142,6 +177,8 @@
 		4AE21D5A281F047400865019 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				4AE21D64281F0E2100865019 /* HTTPRequest.swift */,
+				4AE21D76281F171100865019 /* StorageProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -149,8 +186,56 @@
 		4AE21D5B281F07A300865019 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				4AE21D5C281F0BCA00865019 /* APIClient.swift */,
+				4AE21D69281F0F3100865019 /* HTTPDispatcher.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		4AE21D5E281F0D0D00865019 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4AE21D66281F0E8C00865019 /* Extension */,
+				4AE21D5F281F0D1500865019 /* Enums */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4AE21D5F281F0D1500865019 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				4AE21D60281F0D5000865019 /* HTTPRequestError.swift */,
+				4AE21D62281F0DE000865019 /* HTTPMethod.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		4AE21D66281F0E8C00865019 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4AE21D67281F0EA700865019 /* HTTPRequest+Extension.swift */,
+				4AE21D6B281F0F6900865019 /* HTTPDispatcher+Extension.swift */,
+				4AE21D7D281F318000865019 /* Color+Extension.swift */,
+				4AE21D7F281F32D800865019 /* View+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4AE21D6F281F115800865019 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4AE21D70281F116A00865019 /* UserViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4AE21D7A281F2D7900865019 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				4AE21D41281F029900865019 /* MainView.swift */,
+				4AE21D81281F34E400865019 /* UserSearchController.swift */,
+			);
+			path = MainView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AE21D7C281F310300865019 /* Colors.xcassets in Resources */,
 				4AE21D47281F029A00865019 /* Preview Assets.xcassets in Resources */,
 				4AE21D44281F029A00865019 /* Assets.xcassets in Resources */,
 			);
@@ -223,9 +309,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AE21D6A281F0F3100865019 /* HTTPDispatcher.swift in Sources */,
+				4AE21D71281F116A00865019 /* UserViewModel.swift in Sources */,
 				4AE21D49281F029A00865019 /* Persistence.swift in Sources */,
+				4AE21D80281F32D800865019 /* View+Extension.swift in Sources */,
+				4AE21D6C281F0F6900865019 /* HTTPDispatcher+Extension.swift in Sources */,
+				4AE21D75281F16C200865019 /* UserStorage.swift in Sources */,
 				4AE21D4C281F029A00865019 /* ceiba_users.xcdatamodeld in Sources */,
-				4AE21D42281F029900865019 /* ContentView.swift in Sources */,
+				4AE21D73281F11F300865019 /* UserModel.swift in Sources */,
+				4AE21D7E281F318000865019 /* Color+Extension.swift in Sources */,
+				4AE21D77281F171100865019 /* StorageProtocol.swift in Sources */,
+				4AE21D68281F0EA700865019 /* HTTPRequest+Extension.swift in Sources */,
+				4AE21D63281F0DE000865019 /* HTTPMethod.swift in Sources */,
+				4AE21D61281F0D5000865019 /* HTTPRequestError.swift in Sources */,
+				4AE21D42281F029900865019 /* MainView.swift in Sources */,
+				4AE21D65281F0E2100865019 /* HTTPRequest.swift in Sources */,
+				4AE21D5D281F0BCA00865019 /* APIClient.swift in Sources */,
+				4AE21D82281F34E400865019 /* UserSearchController.swift in Sources */,
 				4AE21D40281F029900865019 /* ceiba_usersApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

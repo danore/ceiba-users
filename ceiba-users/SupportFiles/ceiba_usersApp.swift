@@ -13,8 +13,10 @@ struct ceiba_usersApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .greenNavigationBar()
+                .background(Color.appGreen).ignoresSafeArea()
         }
     }
 }
