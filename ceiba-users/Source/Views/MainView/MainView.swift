@@ -26,50 +26,67 @@ struct MainView: View {
                 viewModel.filter(onText: searchString)
             }) {
                 VStack {
-                    List {
-                        ForEach(viewModel.finalUsers, id: \.id) { user in
-                            VStack(alignment: .leading, spacing: 2) {
-                                Text(user.name ?? "Unknown")
-                                    .foregroundColor(Color.appGreen)
-                                    .font(.system(size: 16, weight: .bold))
-                                
-                                HStack(spacing: 5) {
-                                    Image(systemName: "phone.fill")
-                                        .font(.system(size: 16))
+                    if viewModel.finalUsers.count > 0 {
+                        List {
+                            ForEach(viewModel.finalUsers, id: \.id) { user in
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text(user.name ?? "Unknown")
                                         .foregroundColor(Color.appGreen)
+                                        .font(.system(size: 16, weight: .bold))
                                     
-                                    Text(user.phone ?? "Unknown")
-                                        .font(.system(size: 14))
-                                }
-                                
-                                HStack(spacing: 5) {
-                                    Image(systemName: "envelope.fill")
-                                        .font(.system(size: 16))
-                                        .foregroundColor(Color.appGreen)
-                                    
-                                    Text(user.email ?? "Unknown")
-                                        .font(.system(size: 14))
-                                }
-                                
-                                HStack {
-                                    ZStack(alignment: .trailing) {
-                                        NavigationLink(
-                                            destination: UserDetailView().environmentObject(user)) {
-                                                EmptyView()
-                                            }
-                                            .opacity(0)
-                                        
-                                        Text("VER PUBLICACIONES")
+                                    HStack(spacing: 5) {
+                                        Image(systemName: "phone.fill")
+                                            .font(.system(size: 16))
                                             .foregroundColor(Color.appGreen)
+                                        
+                                        Text(user.phone ?? "Unknown")
+                                            .font(.system(size: 14))
                                     }
+                                    
+                                    HStack(spacing: 5) {
+                                        Image(systemName: "envelope.fill")
+                                            .font(.system(size: 16))
+                                            .foregroundColor(Color.appGreen)
+                                        
+                                        Text(user.email ?? "Unknown")
+                                            .font(.system(size: 14))
+                                    }
+                                    
+                                    HStack {
+                                        ZStack(alignment: .trailing) {
+                                            NavigationLink(
+                                                destination: UserDetailView().environmentObject(user)) {
+                                                    EmptyView()
+                                                }
+                                                .opacity(0)
+                                            
+                                            Text("VER PUBLICACIONES")
+                                                .foregroundColor(Color.appGreen)
+                                        }
+                                    }
+                                    .padding(.top, 10)
                                 }
-                                .padding(.top, 10)
+                                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 120, alignment: .topLeading)
+                                .padding(5)
                             }
-                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 120, alignment: .topLeading)
-                            .padding(5)
                         }
+                        .listStyle(PlainListStyle())
+                    } else {
+                        Text("No data available")
+                            .font(.system(size: 18, weight: .bold))
+                            .foregroundColor(Color.appGreen)
+                        
+                        Button {
+                            viewModel.tryLoadDataAgain()
+                        } label: {
+                            Text("Try again")
+                                .foregroundColor(Color.black)
+                        }
+
                     }
-                    .listStyle(PlainListStyle())
+                }
+                .alert("Problems displaying data", isPresented: $viewModel.showError) {
+                    Button("OK", role: .cancel) { }
                 }
             }
         
