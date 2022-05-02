@@ -14,6 +14,8 @@ class UserViewModel: ObservableObject {
     
     @Published var finalUsers: [User] = []
     @Published private var users: [User] = []
+    @Published var showError: Bool = false
+    
     var filteredUsers: [User] = []
     var searchText = ""
     
@@ -25,6 +27,14 @@ class UserViewModel: ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 print("Completed")
+                
+                switch completion {
+                case .failure:
+                    self.showError = true
+                    break
+                default:
+                    break
+                }
             } receiveValue: { users in
                 if users.count > 0 {
                     print("Users counter: \(users.count)")
@@ -38,6 +48,14 @@ class UserViewModel: ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 print("Completed")
+                
+                switch completion {
+                case .failure:
+                    self.showError = true
+                    break
+                default:
+                    break
+                }
             } receiveValue: { fetchData in
                 if fetchData { self.fetchData() }
             }
@@ -47,10 +65,22 @@ class UserViewModel: ObservableObject {
         userStorage.get()
     }
     
+    func tryLoadDataAgain() {
+        fetchData()
+    }
+    
     private func fetchData() {
         apiClient.dispatch(Users())
             .sink { completion in
                 print("Completion: \(completion)")
+                
+                switch completion {
+                case .failure:
+                    self.showError = true
+                    break
+                default:
+                    break
+                }
             } receiveValue: { users in
                 print("Users: \(users)")
                 self.userStorage.save(users)
